@@ -7,6 +7,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/ResourcesViewProvider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/ResourcesView.cs" />
+    </changedPaths>
+  </component>
   <component name="ProjectId" id="2jyNnXzaukrLLQb4XTL5DqXMjpM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
