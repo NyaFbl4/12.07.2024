@@ -1,17 +1,28 @@
 ﻿using Sirenix.OdinInspector;
+using UnityEngine;
+using Zenject;
 
-namespace Assets.Scripts
+namespace GameEngine
 {
-    public class Helper
+    public class Helper : MonoBehaviour
     {
-        [Button]
-        public void Save()
+        [SerializeField] private long _current;
+        private WoodStorage _woodStorage;
+
+        [Inject]
+        public void Construct(WoodStorage woodStorage)
         {
-            
+            _woodStorage = woodStorage;
+        }
+        
+        [Button]
+        public void AddWood()
+        {
+            _woodStorage.AddWood(_current);
         }
 
         [Button]
-        public void Load()
+        public void AddStone()
         {
             
         }

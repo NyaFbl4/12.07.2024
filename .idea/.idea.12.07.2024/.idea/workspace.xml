@@ -9,9 +9,13 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/View/ResourcesViewProvider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/View/ResourcesView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/WoodObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Wood/WoodStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Wood/WoodObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/ResourcesViewProvider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ResourcesInstaller.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2jyNnXzaukrLLQb4XTL5DqXMjpM" />

@@ -7,7 +7,7 @@ namespace GameEngine
         [SerializeField] private ResourcesView _woodView;
         [SerializeField] private ResourcesView _stoneView;
 
-        public ResourcesView GemView => _woodView;
-        public ResourcesView MoneyView => _stoneView;
+        public ResourcesView WoodView => _woodView;
+        public ResourcesView StoneView => _stoneView;
     }
 }
