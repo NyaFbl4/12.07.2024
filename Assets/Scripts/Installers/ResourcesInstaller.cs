@@ -8,6 +8,7 @@ namespace GameEngine.Installers
         {
             var view = FindObjectOfType<ResourcesViewProvider>();
             WoodBind(view.WoodView);
+            StoneBind(view.StoneView);
         }
 
         private void WoodBind(ResourcesView view)
@@ -20,6 +21,21 @@ namespace GameEngine.Installers
 
             Container
                 .BindInterfacesAndSelfTo<WoodObserver>()
+                .AsSingle()
+                .WithArguments(view)
+                .NonLazy();
+        }
+        
+        private void StoneBind(ResourcesView view)
+        {
+            Container
+                .Bind<StoneStorage>()
+                .AsSingle()
+                .WithArguments(0L)
+                .NonLazy();
+
+            Container
+                .BindInterfacesAndSelfTo<StoneObserver>()
                 .AsSingle()
                 .WithArguments(view)
                 .NonLazy();

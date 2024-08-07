@@ -16,6 +16,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/View/ResourcesViewProvider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ResourcesInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Stone/StoneStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Stone/StoneObserver.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2jyNnXzaukrLLQb4XTL5DqXMjpM" />
@@ -26,9 +28,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13012c8f-f066-4db4-bba3-c74ae8a3d107" name="Default Changelist" comment="" />
+      <created>1723019514463</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723019514463</updated>
+      <workItem from="1723019529298" duration="3548000" />
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>

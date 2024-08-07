@@ -8,11 +8,13 @@ namespace GameEngine
     {
         [SerializeField] private long _current;
         private WoodStorage _woodStorage;
+        private StoneStorage _stoneStorage;
 
         [Inject]
-        public void Construct(WoodStorage woodStorage)
+        public void Construct(WoodStorage woodStorage, StoneStorage stoneStorage)
         {
             _woodStorage = woodStorage;
+            _stoneStorage = stoneStorage;
         }
         
         [Button]
@@ -24,7 +26,7 @@ namespace GameEngine
         [Button]
         public void AddStone()
         {
-            
+            _stoneStorage.AddStone(_current);    
         }
     }
 }
