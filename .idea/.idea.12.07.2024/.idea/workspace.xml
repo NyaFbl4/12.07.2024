@@ -11,13 +11,16 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/View/ResourcesView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Resources/WoodObserver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Wood/WoodStorage.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Wood/WoodObserver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/View/ResourcesViewProvider.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ResourcesInstaller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Stone/StoneStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Stone/StoneObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/SaveLoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ISaveLoader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Wood/WoodObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Wood/WoodStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ResourcesInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/ResourcesSaveLoader.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2jyNnXzaukrLLQb4XTL5DqXMjpM" />
@@ -39,7 +42,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723019514463</updated>
-      <workItem from="1723019529298" duration="3548000" />
+      <workItem from="1723019529298" duration="9523000" />
     </task>
     <servers />
   </component>

@@ -21,7 +21,7 @@ namespace GameEngine
             _disposable.Dispose();
         }
 
-        private void OnWoodChanged(long wood)
+        private void OnWoodChanged(int wood)
         {
             _view.UpdateCurrency(wood);
         }

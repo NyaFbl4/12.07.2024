@@ -1272,6 +1272,11 @@
           <e p="Installers" t="Include">
             <e p="ResourcesInstaller.cs" t="Include" />
           </e>
+          <e p="Loaders" t="Include">
+            <e p="ISaveLoader.cs" t="Include" />
+            <e p="ResourcesSaveLoader.cs" t="Include" />
+            <e p="SaveLoadManager.cs" t="Include" />
+          </e>
           <e p="Resources" t="Include">
             <e p="Stone" t="Include">
               <e p="StoneObserver.cs" t="Include" />

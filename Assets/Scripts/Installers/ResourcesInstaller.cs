@@ -16,7 +16,7 @@ namespace GameEngine.Installers
             Container
                 .Bind<WoodStorage>()
                 .AsSingle()
-                .WithArguments(50L)
+                .WithArguments(0)
                 .NonLazy();
 
             Container
