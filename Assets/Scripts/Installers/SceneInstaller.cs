@@ -2,13 +2,21 @@
 
 namespace GameEngine.Installers
 {
-    public class ResourcesInstaller : MonoInstaller
+    public class SceneInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {
             var view = FindObjectOfType<ResourcesViewProvider>();
             WoodBind(view.WoodView);
             StoneBind(view.StoneView);
+
+            Container
+                .BindInterfacesTo<ResourcesSaveLoader>()
+                .AsSingle()
+                .NonLazy();
+
+            Container
+                .BindInterfacesTo<ISaveLoader>();
         }
 
         private void WoodBind(ResourcesView view)

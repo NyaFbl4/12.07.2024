@@ -13,6 +13,11 @@ namespace GameEngine
             _wood = new IntReactiveProperty(wood);
         }
 
+        public void SetupWood(int wood)
+        {
+            _wood.Value = wood;
+        }
+        
         public void AddWood(int wood)
         {
             _wood.Value += wood;

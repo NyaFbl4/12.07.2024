@@ -14,12 +14,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/View/ResourcesViewProvider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Stone/StoneStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Stone/StoneObserver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/SaveLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ISaveLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Wood/WoodObserver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Wood/WoodStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Installers/ResourcesInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/ISaveLoader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/SaveLoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SceneInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Wood/WoodStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/ResourcesSaveLoader.cs" />
     </changedPaths>
   </component>
@@ -43,6 +45,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723019514463</updated>
       <workItem from="1723019529298" duration="9599000" />
+      <workItem from="1723184931227" duration="5463000" />
     </task>
     <servers />
   </component>

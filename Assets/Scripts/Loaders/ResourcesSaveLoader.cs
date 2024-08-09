@@ -5,30 +5,29 @@ using Zenject;
 
 namespace GameEngine
 {
-    public class ResourcesSaveLoader : MonoBehaviour
+    public class ResourcesSaveLoader : ISaveLoader
     {
-        private WoodStorage _woodStorage;
+        private readonly WoodStorage _woodStorage;
         
-        [Inject]
-        public void Construct(WoodStorage woodStorage)
+        public ResourcesSaveLoader(WoodStorage woodStorage)
         {
             _woodStorage = woodStorage;
+            Debug.Log("Create");
         }
 
-        public void Awake()
+        public void LoadGame(SceneInstaller sceneInstaller)
         {
             if (PlayerPrefs.HasKey("Scripts/Resources/Wood"))
             {
                 var value = PlayerPrefs.GetInt("Scripts/Resources/Wood");
-                _woodStorage.AddWood(value);
-                Debug.Log($"Загрузили дерево " + value);
+                _woodStorage.SetupWood(value);
+                Debug.Log($"Загрузили дерево " + _woodStorage.Wood.Value);
             }
         }
         
-        [Button]
-        public void Save()
+        public void SaveGame(SceneInstaller sceneInstaller)
         {
-            
+            //var woodStorage = sceneInstaller.GetComponent<WoodStorage>();
             PlayerPrefs.SetInt("Scripts/Resources/Wood", _woodStorage.Wood.Value);
             Debug.Log("Сохранили дерево " + _woodStorage.Wood.Value);
         }
