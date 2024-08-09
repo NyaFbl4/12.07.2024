@@ -506,7 +506,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _current: 0
-  _wood: 0
 --- !u!114 &473675218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,7 +515,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 473675215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b02b5d2185b5144bb4320e432c25af, type: 3}
+  m_Script: {fileID: 11500000, guid: 1967c02da67a0b84cb9a203060b8c10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &488998999
@@ -1176,7 +1175,7 @@ GameObject:
   - component: {fileID: 915584530}
   - component: {fileID: 915584531}
   m_Layer: 0
-  m_Name: ResourcesInstaller
+  m_Name: SceneInstaller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1206,7 +1205,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 915584529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e32e6d85b434b3641ad2e1ce2ba89281, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e77eb15df0267b4a95fb655551d19f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1104181184

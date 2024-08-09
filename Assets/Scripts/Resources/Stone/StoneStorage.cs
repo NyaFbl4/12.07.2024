@@ -4,20 +4,25 @@ namespace GameEngine
 {
     public class StoneStorage
     {
-        public IReadOnlyReactiveProperty<long> Stone => _stone;
-        private readonly ReactiveProperty<long> _stone;
+        public IReadOnlyReactiveProperty<int> Stone => _stone;
+        private readonly ReactiveProperty<int> _stone;
 
-        public StoneStorage(long stone)
+        public StoneStorage(int stone)
         {
-            _stone = new LongReactiveProperty(stone);
+            _stone = new IntReactiveProperty(stone);
         }
 
-        public void AddStone(long stone)
+        public void SetupStone(int stone)
+        {
+            _stone.Value = stone;
+        }
+        
+        public void AddStone(int stone)
         {
             _stone.Value += stone;
         }
 
-        public void SpendStone(long stone)
+        public void SpendStone(int stone)
         {
             _stone.SetValueAndForceNotify(_stone.Value - stone);
         }

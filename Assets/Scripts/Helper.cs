@@ -6,8 +6,8 @@ namespace GameEngine
 {
     public class Helper : MonoBehaviour
     {
-        [SerializeField] private long _current;
-        [SerializeField] private int _wood;
+       // [SerializeField] private long _current;
+        [SerializeField] private int _current;
         private WoodStorage _woodStorage;
         private StoneStorage _stoneStorage;
 
@@ -21,7 +21,7 @@ namespace GameEngine
         [Button]
         public void AddWood()
         {
-            _woodStorage.AddWood(_wood);
+            _woodStorage.AddWood(_current);
         }
 
         [Button]

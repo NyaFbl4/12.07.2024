@@ -39,7 +39,7 @@ namespace GameEngine.Installers
             Container
                 .Bind<StoneStorage>()
                 .AsSingle()
-                .WithArguments(0L)
+                .WithArguments(0)
                 .NonLazy();
 
             Container
