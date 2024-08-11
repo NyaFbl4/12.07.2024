@@ -10,31 +10,38 @@ namespace GameEngine
         [ShowInInspector, ReadOnly]
         public ISaveLoader[] _saveLoaders;
 
+        private GameRepository _gameRepository;
+
         [Inject]
-        public void Construct(ISaveLoader[] saveLoaders)
+        public void Construct(ISaveLoader[] saveLoaders, IGameRepository gameRepository)
         {
             _saveLoaders = saveLoaders;
+            _gameRepository = gameRepository as GameRepository;
         }
         
         [Button]
         public void SaveGame()
         {
-            var sceneInstaller = FindObjectOfType<SceneInstaller>();
+            //var sceneInstaller = FindObjectOfType<SceneInstaller>();
             
             foreach (var saveLoader in _saveLoaders)
             {
-                saveLoader.SaveGame(sceneInstaller);
+                saveLoader.SaveGame( _gameRepository);
             }
+            
+            _gameRepository.SaveState();
         }
             
         [Button]
         public void LoadGame()
         {
-            var sceneInstaller = FindObjectOfType<SceneInstaller>();
+            _gameRepository.LoadState();
+            
+            //var sceneInstaller = FindObjectOfType<SceneInstaller>();
             
             foreach (var saveLoader in _saveLoaders)
             {
-                saveLoader.LoadGame(sceneInstaller);
+                saveLoader.LoadGame( _gameRepository);
             }
         }
     }

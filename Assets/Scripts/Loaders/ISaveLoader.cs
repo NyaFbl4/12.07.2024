@@ -2,7 +2,7 @@
 {
     public interface ISaveLoader
     {
-        void LoadGame(SceneInstaller sceneInstaller);
-        void SaveGame(SceneInstaller sceneInstaller);
+        void LoadGame( IGameRepository gameRepository);
+        void SaveGame( IGameRepository gameRepository);
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GameEngine.Installers
+namespace GameEngine
 {
     public interface IGameRepository
     {

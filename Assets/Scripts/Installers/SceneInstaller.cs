@@ -11,6 +11,11 @@ namespace GameEngine.Installers
             StoneBind(view.StoneView);
 
             Container
+                .Bind<IGameRepository>()
+                .To<GameRepository>()
+                .AsSingle();
+
+            Container
                 .BindInterfacesTo<ResourcesSaveLoader>()
                 .AsSingle()
                 .NonLazy();
