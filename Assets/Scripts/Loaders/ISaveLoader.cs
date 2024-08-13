@@ -1,8 +1,10 @@
-﻿namespace GameEngine.Installers
+﻿using Zenject;
+
+namespace GameEngine.Installers
 {
     public interface ISaveLoader
     {
-        void LoadGame( IGameRepository gameRepository);
-        void SaveGame( IGameRepository gameRepository);
+        void LoadGame(DiContainer diContainer, IGameRepository gameRepository);
+        void SaveGame(DiContainer diContainer, IGameRepository gameRepository);
     }
 }

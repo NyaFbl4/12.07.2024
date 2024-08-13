@@ -21,11 +21,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Resources/Stone/StoneStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Installers/IGameRepository.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameEngine/IGameRepository.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/ISaveLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameEngine/GameRepository.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/ResourcesSaveLoader.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SceneInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/ISaveLoader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/SaveLoader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Data/ResourcesData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/SaveLoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/WoodSaveLoader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SceneInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/ResourcesSaveLoader.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2jyNnXzaukrLLQb4XTL5DqXMjpM" />
@@ -50,6 +53,8 @@
       <workItem from="1723019529298" duration="9599000" />
       <workItem from="1723184931227" duration="6211000" />
       <workItem from="1723194371266" duration="7865000" />
+      <workItem from="1723538286542" duration="1606000" />
+      <workItem from="1723548167496" duration="6263000" />
     </task>
     <servers />
   </component>

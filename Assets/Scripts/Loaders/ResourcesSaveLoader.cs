@@ -7,7 +7,7 @@ using Zenject;
 namespace GameEngine
 {
     [Serializable]
-    public class ResourcesSaveLoader : ISaveLoader
+    public class ResourcesSaveLoader : SaveLoader<WoodStorage, ResourcesData>
     {
         //private IGameRepository _gameRepository;
         private readonly WoodStorage _woodStorage;
@@ -21,32 +21,57 @@ namespace GameEngine
             Debug.Log("Create ResourcesSaveLoader");
         }
 
-        public void LoadGame (IGameRepository gameRepository)
+        protected override ResourcesData ConvertToData(WoodStorage service)
         {
-            if (gameRepository.TryGetData<int>(out int wood))
+            Debug.Log($"Convert to data = {service.Wood}");
+            return new ResourcesData()
             {
-                //var wood = PlayerPrefs.GetInt("Scripts/Resources/Wood");
-                _woodStorage.SetupWood(wood);
-                Debug.Log($"Загрузили дерево " + _woodStorage.Wood.Value);
-            }
-
+                Wood = service.Wood.Value
+                
+            };
+        }
+        
+        protected override void SetupData(WoodStorage service, ResourcesData data)
+        {
+            Debug.Log($"Setup data = {service.Wood}");
+            service.SetupWood(data.Wood);
+        }
+        
+        /*
+        public void LoadGame (DiContainer diContainer, IGameRepository gameRepository)
+        {            
             if (gameRepository.TryGetData<int>(out int stone))
             {
                 //var stone = PlayerPrefs.GetInt("Scripts/Resources/Stone");
-                _stoneStorage.SetupStone(stone);
-                Debug.Log($"Загрузили камень " + _stoneStorage.Stone.Value);
+                var stoneStorage = diContainer.Resolve<StoneStorage>();
+                stoneStorage.SetupStone(stone);
+                Debug.Log($"Загрузили камень " + stoneStorage.Stone.Value);
+            }
+            
+            if (gameRepository.TryGetData<int>(out int wood))
+            {
+                //var wood = PlayerPrefs.GetInt("Scripts/Resources/Wood");
+                var woodStorage = diContainer.Resolve<WoodStorage>();
+                woodStorage.SetupWood(wood);
+                Debug.Log($"Загрузили дерево " + woodStorage.Wood.Value);
             }
         }
         
-        public void SaveGame(IGameRepository gameRepository)
+        public void SaveGame(DiContainer diContainer, IGameRepository gameRepository)
         {
-            gameRepository.SetData(_woodStorage.Wood.Value);
-            PlayerPrefs.SetInt("Scripts/Resources/Wood", _woodStorage.Wood.Value);
-            Debug.Log("Сохранили дерево " + _woodStorage.Wood.Value);
+            //var woodStorage = sceneInstaller.GetComponentsInParent().
+            //var woodStorage = sceneContext.Container.ParentContainers.
+            var woodStorage = diContainer.Resolve<WoodStorage>();
+            var stoneStorage = diContainer.Resolve<StoneStorage>();
             
-            gameRepository.SetData(_stoneStorage.Stone.Value);
-            PlayerPrefs.SetInt("Scripts/Resources/Stone", _stoneStorage.Stone.Value);
-            Debug.Log("Сохранили камень " + _stoneStorage.Stone.Value);
+            gameRepository.SetData(woodStorage.Wood.Value);
+            PlayerPrefs.SetInt("Scripts/Resources/Wood", woodStorage.Wood.Value);
+            Debug.Log("Сохранили дерево " + woodStorage.Wood.Value);
+            
+            gameRepository.SetData(stoneStorage.Stone.Value);
+            PlayerPrefs.SetInt("Scripts/Resources/Stone", stoneStorage.Stone.Value);
+            Debug.Log("Сохранили камень " + stoneStorage.Stone.Value);
         }
+        */
     }
 }

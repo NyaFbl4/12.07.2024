@@ -11,22 +11,24 @@ namespace GameEngine
         public ISaveLoader[] _saveLoaders;
 
         private GameRepository _gameRepository;
-
+        private DiContainer _diContainer;
+        
+        private SceneInstaller _sceneInstaller;
+        
         [Inject]
-        public void Construct(ISaveLoader[] saveLoaders, IGameRepository gameRepository)
+        public void Construct(ISaveLoader[] saveLoaders, IGameRepository gameRepository, DiContainer diContainer)
         {
             _saveLoaders = saveLoaders;
             _gameRepository = gameRepository as GameRepository;
+            _diContainer = diContainer;
         }
         
         [Button]
         public void SaveGame()
         {
-            //var sceneInstaller = FindObjectOfType<SceneInstaller>();
-            
             foreach (var saveLoader in _saveLoaders)
             {
-                saveLoader.SaveGame( _gameRepository);
+                saveLoader.SaveGame(_diContainer, _gameRepository);
             }
             
             _gameRepository.SaveState();
@@ -36,12 +38,10 @@ namespace GameEngine
         public void LoadGame()
         {
             _gameRepository.LoadState();
-            
-            //var sceneInstaller = FindObjectOfType<SceneInstaller>();
-            
+
             foreach (var saveLoader in _saveLoaders)
             {
-                saveLoader.LoadGame( _gameRepository);
+                saveLoader.LoadGame(_diContainer, _gameRepository);
             }
         }
     }
