@@ -7,7 +7,7 @@ using Zenject;
 namespace GameEngine
 {
     [Serializable]
-    public class ResourcesSaveLoader : SaveLoader<WoodStorage, ResourcesData>
+    public class ResourcesSaveLoader : SaveLoader<WoodStorage, WoodData>
     {
         //private IGameRepository _gameRepository;
         private readonly WoodStorage _woodStorage;
@@ -21,17 +21,17 @@ namespace GameEngine
             Debug.Log("Create ResourcesSaveLoader");
         }
 
-        protected override ResourcesData ConvertToData(WoodStorage service)
+        protected override WoodData ConvertToData(WoodStorage service)
         {
             Debug.Log($"Convert to data = {service.Wood}");
-            return new ResourcesData()
+            return new WoodData()
             {
                 Wood = service.Wood.Value
                 
             };
         }
         
-        protected override void SetupData(WoodStorage service, ResourcesData data)
+        protected override void SetupData(WoodStorage service, WoodData data)
         {
             Debug.Log($"Setup data = {service.Wood}");
             service.SetupWood(data.Wood);

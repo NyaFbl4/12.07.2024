@@ -1,20 +1,25 @@
-﻿using GameEngine;
+﻿using System;
+using UnityEngine;
 
-namespace Assets.Scripts.Loaders
+namespace GameEngine
 {
-    public class WoodSaveLoader : SaveLoader<WoodStorage, ResourcesData>
+    [Serializable]
+    public class WoodSaveLoader : SaveLoader<WoodStorage, WoodData>
     {
-        protected override ResourcesData ConvertToData(WoodStorage service)
+        protected override WoodData ConvertToData(WoodStorage service)
         {
-            return new ResourcesData()
+            Debug.Log($"Convert Wood to data = {service.Wood}");
+            
+            return new WoodData()
             {
                 Wood = service.Wood.Value
             };
         }
 
-        protected override void SetupData(WoodStorage service, ResourcesData data)
+        protected override void SetupData(WoodStorage service, WoodData data)
         {
-            
+            service.SetupWood(data.Wood);
+            Debug.Log($"Setup Wood data = {service.Wood}");
         }
     }
 }

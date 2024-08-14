@@ -15,10 +15,6 @@ namespace GameEngine.Installers
                 .To<GameRepository>()
                 .AsSingle();
 
-            Container
-                .BindInterfacesTo<ResourcesSaveLoader>()
-                .AsSingle()
-                .NonLazy();
 
             Container
                 .BindInterfacesTo<ISaveLoader>();
