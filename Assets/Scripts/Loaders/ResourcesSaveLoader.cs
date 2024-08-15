@@ -21,20 +21,20 @@ namespace GameEngine
             Debug.Log("Create ResourcesSaveLoader");
         }
 
+        
         protected override WoodData ConvertToData(WoodStorage service)
         {
             Debug.Log($"Convert to data = {service.Wood}");
             return new WoodData()
             {
-                Wood = service.Wood.Value
-                
+               // Wood = service.Wood.Value
             };
         }
-        
+
         protected override void SetupData(WoodStorage service, WoodData data)
         {
             Debug.Log($"Setup data = {service.Wood}");
-            service.SetupWood(data.Wood);
+            //service.SetupWood(data.Wood);
         }
         
         /*

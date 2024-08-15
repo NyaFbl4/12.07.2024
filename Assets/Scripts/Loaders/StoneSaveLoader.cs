@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace GameEngine
 {
+    [Serializable]
     public class StoneSaveLoader : SaveLoader<StoneStorage, StoneData>
     {
         protected override StoneData ConvertToData(StoneStorage service)
