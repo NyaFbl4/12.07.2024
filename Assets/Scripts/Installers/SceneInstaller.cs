@@ -14,8 +14,7 @@ namespace GameEngine.Installers
                 .Bind<IGameRepository>()
                 .To<GameRepository>()
                 .AsSingle();
-
-
+            
             Container
                 .BindInterfacesTo<ISaveLoader>();
         }
