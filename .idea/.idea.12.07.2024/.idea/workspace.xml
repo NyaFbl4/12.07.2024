@@ -36,6 +36,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameEngine1/Systems/ResourceService.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Installers/SceneInstaller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Data/PositionUnitsData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Data/ResourseData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Data/ResourseContainerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Data/ResourceContainerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameEngine1/Objects/Resource.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Data/ResourceData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Loaders/Resource/ResourcesSaveLoader.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2jyNnXzaukrLLQb4XTL5DqXMjpM" />
@@ -44,11 +50,32 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,6 +97,8 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

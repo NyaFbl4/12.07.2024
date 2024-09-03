@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace GameEngine
 {
+    [Serializable]
     //Нельзя менять!
     public sealed class Resource : MonoBehaviour
     {

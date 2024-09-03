@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using GameEngine.Installers;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -7,8 +8,38 @@ using Zenject;
 namespace GameEngine
 {
     [Serializable]
-    public class ResourcesSaveLoader : SaveLoader<WoodStorage, WoodData>
+    public class ResourcesSaveLoader : SaveLoader<ResourceService, ResourceContainerData>
     {
+        protected override ResourceContainerData ConvertToData(ResourceService service)
+        {
+            var resourcesData = new List<ResourceData>();
+            var resources = service.GetResources();
+
+            foreach (var resource in resources)
+            {
+                var data = new ResourceData
+                {
+                    Id = resource.ID,
+                    Amount = resource.Amount
+                };
+                
+                resourcesData.Add(data);
+            }
+
+            var resourceContainerData = new ResourceContainerData
+            {
+                ResourceData = resourcesData
+            };
+
+            return resourceContainerData;
+        }
+
+        protected override void SetupData(ResourceService service, ResourceContainerData data)
+        {
+            
+        }
+
+        /*
         //private IGameRepository _gameRepository;
         private readonly WoodStorage _woodStorage;
         private readonly StoneStorage _stoneStorage;
@@ -37,7 +68,7 @@ namespace GameEngine
             //service.SetupWood(data.Wood);
         }
         
-        /*
+        
         public void LoadGame (DiContainer diContainer, IGameRepository gameRepository)
         {            
             if (gameRepository.TryGetData<int>(out int stone))

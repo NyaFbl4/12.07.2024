@@ -1258,6 +1258,8 @@
         <e p="Scripts" t="Include">
           <e p="Data" t="Include">
             <e p="PositionUnitsData.cs" t="Include" />
+            <e p="ResourceContainerData.cs" t="Include" />
+            <e p="ResourceData.cs" t="Include" />
             <e p="StoneData.cs" t="Include" />
             <e p="WoodData.cs" t="Include" />
           </e>
@@ -1284,11 +1286,13 @@
           </e>
           <e p="Loaders" t="Include">
             <e p="ISaveLoader.cs" t="Include" />
-            <e p="ResourcesSaveLoader.cs" t="Include" />
+            <e p="Resource" t="Include">
+              <e p="ResourcesSaveLoader.cs" t="Include" />
+              <e p="StoneSaveLoader.cs" t="Include" />
+              <e p="WoodSaveLoader.cs" t="Include" />
+            </e>
             <e p="SaveLoader.cs" t="Include" />
             <e p="SaveLoadManager.cs" t="Include" />
-            <e p="StoneSaveLoader.cs" t="Include" />
-            <e p="WoodSaveLoader.cs" t="Include" />
           </e>
           <e p="Resources" t="Include">
             <e p="Stone" t="Include">
